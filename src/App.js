@@ -20,14 +20,12 @@ function App() {
 
   return (
       <Router>
-        {/* <MyErrorBoundary> */}
           <Suspense fallback={<div>Loading....</div>}>
             <Switch>
               <Route exact path="/home" component={Home}  />
               <Route path="/about" component={About} />
             </Switch>
           </Suspense>
-        {/* </MyErrorBoundary> */}
       </Router>
   );
 }
