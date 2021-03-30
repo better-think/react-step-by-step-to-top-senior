@@ -1,21 +1,7 @@
-# Create React Loading Component in 2 mins
+# React example for learng  
 
-## Usage
-1. replace your import with React.lazy(() => import("./yourcomponent")
-
-    const OtherComponent = React.lazy(() => import('./components/OtherComponent'))
-
-2. import Suspense component from react
-    
-    import React,{ Suspense } from 'react';
-
-3. update render method like bellow.
-    
-    <Suspense fallback={<div>Loading....</div>}>
-        <OtherComponent ></OtherComponent>
-    </Suspense>
-
-you will need to update the loading compoenent(<div>Loading....</div> ) as you want.
+## Description
+This project has all code and examples from https://reactjs.org/docs/code-splitting.html
 
 ## Available Scripts
 
