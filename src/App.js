@@ -13,6 +13,21 @@ const ThemeColor = AppContexts.ThemeColor
 const Home = lazy(() => import('./routes/Home'))
 const About = lazy(() => import('./routes/About'))
 
+function IndexPage(props) {
+  return (
+    <ThemeColor.Consumer>
+      {({theme, toggleTheme}) => {
+        <button
+          onClick={toggleTheme}
+          style={{backgroundColor: theme.background}}>
+          Toggle Theme
+        </button>
+      }
+      }
+    </ThemeColor.Consumer>
+  )
+}
+
 
 function App() {
   if (process.env.NODE_ENV !== 'production') {
@@ -26,6 +41,7 @@ function App() {
               <Switch>
                 <Route exact path="/home" component={Home}  />
                 <Route path="/about" component={About} />
+                <Route path='/' component={IndexPage} />
               </Switch>
             </ThemeColor.Provider>
           </Suspense>
