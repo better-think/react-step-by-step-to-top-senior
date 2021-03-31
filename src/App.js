@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css';
 
-// import MyErrorBoundary from './components/MyErrorBoundary';
+import AppContexts from './context-providers';
+
+const ThemeColor = AppContexts.ThemeColor
 
 // components
 const Home = lazy(() => import('./routes/Home'))
@@ -13,7 +15,6 @@ const About = lazy(() => import('./routes/About'))
 
 
 function App() {
-
   if (process.env.NODE_ENV !== 'production') {
     axe(React, ReactDOM, 1000);
   }
@@ -21,10 +22,12 @@ function App() {
   return (
       <Router>
           <Suspense fallback={<div>Loading....</div>}>
-            <Switch>
-              <Route exact path="/home" component={Home}  />
-              <Route path="/about" component={About} />
-            </Switch>
+            <ThemeColor.Provider value={"blue"}>
+              <Switch>
+                <Route exact path="/home" component={Home}  />
+                <Route path="/about" component={About} />
+              </Switch>
+            </ThemeColor.Provider>
           </Suspense>
       </Router>
   );
