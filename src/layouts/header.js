@@ -1,18 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Avatar from './components/Avatar'
 
 export default function header() {
     return (
-        <div style={{backgroundColor: 'rgb(162 187 167)', display: 'flex'}}>
-            <div>
-                <span>Home</span>
-            </div>
-            <div>
-                <span>About</span>
-            </div>
-            <div>
-                <Avatar />
-            </div>
+        <div style={{backgroundColor: 'rgb(162 187 167)'}}>
+            <nav style={{display: 'flex'}}>
+                <div style={{padding: '0 10px'}}>
+                    <Link  >Home</Link>
+                </div>
+                <div style={{padding: '0 10px'}}>
+                    <Link  >About</Link>
+                </div>
+                <div>
+                    <Avatar />
+                </div>
+            </nav>
         </div>
     )
 }
