@@ -39,9 +39,9 @@ function App() {
           <Suspense fallback={<div>Loading....</div>}>
             <ThemeColor.Provider value={"blue"}>
               <Switch>
-                <Route exact path="/home" component={Home}  />
-                <Route path="/about" component={About} />
-                <Route path='/' component={IndexPage} />
+                  <Route exact path="/home" component={Home}  />
+                  <Route path="/about" component={About} />
+                  <Route path='/' component={IndexPage} />
               </Switch>
             </ThemeColor.Provider>
           </Suspense>
