@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Avatar from './components/Avatar'
 
 export default function header() {
+
+
     return (
         <div style={{backgroundColor: 'rgb(162 187 167)'}}>
             <nav style={{display: 'flex'}}>
